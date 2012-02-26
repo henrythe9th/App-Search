@@ -1,5 +1,6 @@
 Django==1.1.1
-
+pycurl==7.16.4
+simplejson==2.2.1
 
 
 
