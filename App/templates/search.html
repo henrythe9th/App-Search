@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD/XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+	<script type="text/javascript" src="/site_media/search.js"></script>
+	<script type="text/javascript" src="/site_media/jquery.js"></script>
+   
+      <title>Search for Apps</title>
+   </head>
+   
+   <body>
+      <p>Search for an Application</p>
+      <form id="search-form" method="get" action=".">
+	      {{ form.as_p }}
+    	  <input type="submit" value="Search"/>
+      </form>
+      <div id="search-results">
+      {% if show_results %}
+      	{% include "apps_list.html" %}
+      {% endif %}
+      </div>
+   </body>
+</html>
