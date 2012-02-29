@@ -24,6 +24,13 @@ def search_by_term(term):
                 basicapp['appUrl'] = app['trackViewUrl']
                 basicapp['smallIcon'] = app['artworkUrl60']
                 basicapp['largeIcon'] = app['artworkUrl512']
+                rawIconUrl = app['artworkUrl512']
+                iconUrlList = rawIconUrl.split(".")
+                iconUrlList.pop()
+                iconUrlList.append("175x175-75")
+                iconUrlList.append("png")
+                iconUrl = ".".join(iconUrlList)
+                basicapp['iconUrl'] = iconUrl
                 rtn.append(basicapp)
                 
             
